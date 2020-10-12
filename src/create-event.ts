@@ -93,7 +93,7 @@ export function createSetEvent<
   const _cbs = new Set<C>()
 
   return {
-    addListener,
+    addListener: jest.fn(addListener),
     hasListener,
     hasListeners,
     callListeners,
